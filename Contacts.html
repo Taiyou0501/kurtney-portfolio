@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurtney's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sleepy+Moody&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Add this CSS to highlight the active link */
+        .active {
+            color: white;
+            background-color: #ED9CBD;
+        }
+        /* Add custom style for the new phrase */
+        .contact-header {
+            font-family: 'The Bold Font', sans-serif; /* Use the bold font */
+            font-size: 5rem; /* Adjust size as needed */
+            color: #ED9CBD; /* Set the color to match your theme */
+            text-align: center; /* Center the text */
+            margin: 20px 0; /* Add some margin */
+        }
+        .sparkle-container {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Center the content */
+            align-items: center; /* Align items vertically */
+            margin: 20px 0; /* Add some margin */
+        }
+        .sparkle-icons {
+            width: 70px; /* Adjust size as needed */
+            height: 70px;
+            margin: 0 10px; /* Add space between icons and text */
+        }
+        .contact-info {
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Align items vertically */
+            justify-content: center; /* Center the content */
+            margin: 10px 0; /* Add some margin */
+            text-align: center; /* Center text */
+        }
+        .contact-details {
+            margin-right: 2px; /* Space between image and text */
+            font-family: 'Sleepy Moody', cursive; /* Use Sleepy Moody font */
+            font-size: 1.5rem; /* Increase font size */
+            color: #ED9CBD; /* Set the color to match your theme */
+            text-align: right;
+        }
+        .contact-details h3 {
+            font-family: 'Sleepy Moody', cursive;  /* Use the bold font */
+            color: #ED9CBD; /* Set the color to match your theme */
+            font-size: 40px;
+
+        }
+        .contact-details p {
+            margin: 5px 0; /* Add some margin between paragraphs */
+
+        }
+        .profile-image {
+            width: 400px; /* Adjust size as needed */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="assets/Logo.png" alt="Kurtney Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="About.html" class="nav-link">About Me</a></li>
+            <li><a href="works.html" class="nav-link">Works</a></li>
+            <li><a href="Contact.html" class="nav-link active">Contacts</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <!-- Flex container for sparkle icons and phrase -->
+  <div class="sparkle-container">
+      <img src="assets/sparkle.png" alt="Sparkle" class="sparkle-icons" style="transform: scaleX(-1);">
+      <h2 class="contact-header">LETS GET IN TOUCH!</h2>
+      <img src="assets/sparkle.png" alt="Sparkle" class="sparkle-icons">
+  </div>
+
+  <!-- Contact Info Container -->
+  <div class="contact-info">
+      <div class="contact-details">
+          <h3 style="margin-top:75px ;">Don't be afraid to</h3>
+          <h3 style="margin-bottom: 45px;">say hello to me!</h3>
+          <p><a href="https://www.instagram.com/kwrtniilvvli" target="_blank" style="text-decoration: none; color: #ED9CBD;">kwrtniilvvli</a> <img src="assets/1.png" alt="Instagram Icon" style="width: 30px; height: 30px; vertical-align: middle; margin-left: 10px; margin-bottom: 20px;"></p>
+          <p><a href="https://www.linkedin.com/in/kurtney-luv-corteza-84aa0a26b" target="_blank" style="text-decoration: none; color: #ED9CBD;">kurtney luv corteza</a><img src="assets/3.png" alt="LinkedIn Icon" style="width: 30px; height: 30px; vertical-align: middle; margin-left: 10px;margin-bottom: 20px;"> </p>
+          <p>cortezakurtneyluv@gmail.com<img src="assets/2.png" alt="Gmail Icon" style="width: 30px; height: 30px; vertical-align: middle; margin-left: 10px;"></p>
+      </div>
+      <img src="assets/kowrt.png" alt="Kurtney" class="profile-image">
+  </div>
+
+</body>
+
+</html>
