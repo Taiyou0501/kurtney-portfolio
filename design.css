@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('assets/Home.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 8%;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.logo {
+    display:flex;
+    align-items: center;
+    margin-left: -100px;
+    margin-top: -20px;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    font-family: 'Fuzzy Bubbles', cursive;
+    margin-right: -100px;
+    margin-top: -10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ed9cbd;
+    font-weight: 400;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    font-size: 2rem;
+    padding: 8px 25px;
+    border-radius: 30px;
+    font-family: 'Sleepy Moody', cursive;
+}
+
+nav a:hover {
+    color: white;
+    background-color:#ED9CBD ;
+    text-shadow: none;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    padding: 0 8%;
+    gap: 4rem;
+}
+
+.profile-image {
+    width: 300px;
+    height: auto;
+    border-radius: 30px;
+    margin-left: 0;
+    align-self: flex-start;
+}
+
+.profile-content {
+    max-width: 1000px;
+    padding-top: 50px;
+    margin-right: 0;
+}
+
+.profile-content h1 {
+    font-family: 'Finger Paint', serif;
+    font-size: 3rem;
+    color: #ed9cbd;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.profile-content p {
+    font-family: 'Fuzzy Bubbles', serif;
+    font-size: 19px;
+    color: #ed9cbd;
+    margin-bottom: 0;
+    line-height: 1.8;
+    max-width: 650px;
+    font-weight: bold;
+}
+
+.button-container {
+    margin-top: 1px;
+    display: flex;
+    justify-content: center;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: #ed9cbd;
+    color: white;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+    background-color: #ed9cbd;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.personal-info {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ed9cbd;
+    border-radius: 15px;
+    width: 80%;
+    max-width: 1015px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-item i {
+    font-size: 36px;
+    color: #ed9cbd;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-text span {
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 20px;
+    color: #ed9cbd;
+    font-weight: bold;
+}
+
+.info-text p {
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 20px;
+    color: #ed9cbd;
+    margin: 0;
+}
+
+.skills-container {
+    margin-top: 0;
+    padding: 2rem;
+    width: 100%;
+    max-width: 1540px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-image {
+    width: 100%;
+    max-width: 1090px;
+    height: auto;
+}
+
+.sparkle-icon {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    position: relative;
+    animation: sparkle-animation 1.5s infinite;
+}
+
+.left-sparkle {
+    margin-right: 10px; /* Space between sparkle and button */
+}
+
+.right-sparkle {
+    margin-left: 10px; /* Space between sparkle and button */
+}
+
+@keyframes sparkle-animation {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    height: 350px; /* Set a fixed height for the slider */
+    margin: 20px auto; /* Center the slider */
+    overflow: hidden; /* Hide overflow */
+    border-radius: 15px; /* Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow for depth */
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth transition */
+}
+
+.slide {
+    min-width: 100%; /* Each slide takes full width */
+    height: 100%; /* Ensure each slide takes the full height of the container */
+    object-fit: cover; /* Maintain aspect ratio and cover the container */
+    display: none; /* Hide all slides initially */
+    border-radius: 15px; /* Match the border radius of the container */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    background-color: transparent; /* Make background transparent */
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10; /* Ensure buttons are above the slides */
+}
+
+.prev img, .next img {
+    width: 30px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.prev {
+    left: 160px; /* Position left */
+}
+
+.next {
+    right: 160px; /* Position right */
+}
+
+.container {
+    width: 80%; /* Adjust width as needed */
+    display: flex;
+    justify-content: space-between; /* Space between the sections */
+    margin: 30px auto; /* Center the container */
+
+}
+
+.works-container, .about-container {
+    text-align: center;
+    width: 50%; /* Adjust width as needed */
+    margin: 0; /* Removed margin to eliminate gap */
+}
+
+.works, .about {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Space between images */
+    margin: 30px 0;
+}
+
+.work-item {
+    width: 250px; /* Adjust width as needed for larger images */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    
+}
+.about-item{
+    width: 250px; /* Adjust width as needed for larger images */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+}
+
+.work-item img, .about-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove bottom space */
+}
+
+.works-container h2 {
+    font-family: 'The Bold Font', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ED9CBD;
+    text-align: left;
+    margin: 0;
+    padding-left: 65px;
+}
+
+.about-container h2 {
+    font-family: 'The Bold Font', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ED9CBD;
+    text-align: left;
+    margin: 0;
+    padding-left: 65px;
+}
+
+@font-face {
+    font-family: 'The Bold Font';
+    src: url('assets/THE BOLD FONT.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Sleepy Moody';
+    src: url('assets/Sleepy Moody.otf') format('opentype');
+}
+
+.button-link {
+    display: inline-block;
+    font-family: 'The Bold Font', sans-serif; /* Use the same font */
+    font-size: 2rem; /* Adjust size as needed */
+    color: #ED9CBD; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 30px; /* Rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transition effects */
+}
+
+.button-link:hover {
+    background-color: #ED9CBD; /* Background color on hover */
+    color: white; /* Text color on hover */
+}
+
+.image-gallery {
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: space-between; /* Space between images */
+    margin: 50px auto; /* Center the gallery */
+    max-width: 1300px; /* Maximum width of the gallery */
+}
+
+.image-item {
+    flex: 1; /* Allow items to grow equally */
+    margin: 0 50px; /* Space between items */
+}
+
+.image-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    aspect-ratio: 1 / 1; /* Ensure square aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    object-fit: cover; /* Cover the area without distortion */
+}
+
+.works-header {
+    text-align: center; /* Center the heading */
+    margin: 0 50px; /* Add some margin above and below */
+}
+
+.works-header h2 {
+    font-family: 'The Bold Font', sans-serif; /* Use the bold font */
+    font-size: 3rem; /* Adjust size as needed */
+    color: #ED9CBD; /* Set the color to match your theme */
+    text-decoration: underline; /* Add underline */
+    text-decoration-color: #ED9CBD; /* Optional: set underline color */
+}
+
+.image-title {
+    display: block; /* Make the title a block element */
+    text-align: center; /* Center the title */
+    margin-top: 5px; /* Space between the image and title */
+    color: #ED9CBD; /* Set the title color */
+    text-decoration: none; /* Remove underline */
+    font-family: 'The Bold Font', sans-serif; /* Use the bold font */
+    font-size: 1.2rem; /* Adjust size as needed */
+}
+
+.image-title:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.empty {
+    width: 100%; /* Adjust width as needed */
+    height: 100px; /* Set a height to maintain the grid structure */
+    visibility: hidden; /* Make them invisible */
+}
+
+.back-button {
+    display: inline-block; /* Make it an inline block for centering */
+    background-color: #ED9CBD; /* Background color */
+    color: white; /* Text color */
+    font-family: 'Fuzzy Bubbles', cursive; /* Font style */
+    font-size: 1.5rem; /* Font size */
+    font-weight: bold; /* Bold text */
+    padding: 15px 30px; /* Padding for size */
+    border-radius: 30px; /* Rounded corners */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+    margin: 20px auto; /* Center the button */
+    text-align: center; /* Center text */
+}
+
+.back-button:hover {
+    background-color: #d68a9e; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurtney's Portfolio - Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint&family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Add this CSS to highlight the active link */
+        .active {
+            color: white;
+            background-color: #ED9CBD;
+        }
+        /* Modal styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.9); 
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%; 
+            max-width: 700px; 
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <img src="assets/Logo.png" alt="Kurtney Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="About.html" class="nav-link">About Me</a></li>
+            <li><a href="works.html" class="nav-link active">Works</a></li>
+            <li><a href="contact.html" class="nav-link">Contacts</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="works-header">
+    <h2>MY WORKS</h2>
+</div>
+
+<div class="image-gallery">
+    <div class="image-item">
+        <img src="assets/intrams/19.png" alt="Work 1">
+        <a href="#" class="image-title" data-category="intramurals">INTRAMURALS 2024</a>
+    </div>
+    <div class="image-item">
+        <img src="assets/aespa/1.png" alt="Work 2">
+        <a href="#" class="image-title" data-category="aespa">AESPA BETTER THINGS INSPIRED SHIRT</a>
+    </div>
+    <div class="image-item">
+        <img src="assets/dough/FINAL LOGO.png" alt="Work 3">
+        <a href="#" class="image-title" data-category="dough">Commission 
+          (DOUGH DELIGHT)</a>
+    </div>
+    <div class="image-item">
+        <img src="assets/3d/10.jpg" alt="Work 4">
+        <a href="#" class="image-title" data-category="randomworks">RANDOM 3D WORKS</a>
+    </div>
+</div>
+
+<div class="image-gallery">
+    <div class="image-item">
+        <img src="assets/doro/3.png" alt="Work 5">
+        <a href="#" class="image-title" data-category="dorosense">Dorosence jersey</a>
+    </div>
+    <div class="image-item">
+        <img src="assets/random/1.png" alt="Work 6">
+        <a href="#" class="image-title" data-category="commissions">RANDOM COMMISSIONS</a>
+    </div>
+    <div class="image-item">
+        <img src="assets/lifestyle/6.png" alt="Work 7">
+        <a href="#" class="image-title" data-category="lifestyle">lifestyle commission works</a>
+    </div>
+    <div class="image-item">
+        <img src="assets/ceafa/2.png" alt="Work 8">
+        <a href="#" class="image-title" data-category="council">ceafalympics (2024) council shirt</a>
+    </div>
+</div>
+
+<div class="image-gallery">
+  <div class="image-item">
+      <img src="assets/ags/9.png"Work 5">
+      <a href="#" class="image-title" data-category="ags">AGS WEBPAGE DESIGN commission</a>
+  </div>
+  <div class="image-item">
+      <img src="assets/sena/6.png" alt="Work 6">
+      <a href="#" class="image-title" data-category="sena">sena desk app design</a>
+  </div>
+  <div class="image-item">
+      <img src="assets/rcess/1.png" alt="Work 7">
+      <a href="#" class="image-title" data-category="rcess">rcess running sniglet commission</a>
+  </div>
+  <div class="image-item">
+      <img src="assets/css/4.png" alt="Work 8">
+      <a href="#" class="image-title" data-category="css">css 2023 works</a>
+  </div>
+</div>
+
+<script>
+    // Function to show related images
+    function showRelatedImages(category) {
+        // Clear existing images
+        const galleries = document.querySelectorAll('.image-gallery');
+        galleries.forEach(gallery => {
+            gallery.style.display = 'none'; // Hide all galleries
+        });
+
+        // Create a new gallery for related images
+        const newGallery = document.createElement('div');
+        newGallery.className = 'image-gallery';
+
+        // Define related images based on the category
+        const relatedImages = {
+            intramurals: [
+                { src: 'assets/intrams/13.png', alt: 'Intramurals Image 1' },
+                { src: 'assets/intrams/14.png', alt: 'Intramurals Image 2' },
+                { src: 'assets/intrams/15.png', alt: 'Intramurals Image 3' },
+                { src: 'assets/intrams/16.png', alt: 'Intramurals Image 4' },
+                { src: 'assets/intrams/21.png', alt: 'Intramurals Image 5' },
+                { src: 'assets/intrams/17.png', alt: 'Intramurals Image 6' },
+                { src: 'assets/intrams/18.png', alt: 'Intramurals Image 7' },
+                { src: 'assets/intrams/19.png', alt: 'Intramurals Image 8' },
+                { src: 'assets/intrams/20.png', alt: 'Intramurals Image 9' }
+            ],
+            aespa: [
+                { src: 'assets/aespa/1.png', alt: 'AESPA Image 1' },
+                { src: 'assets/aespa/2.png', alt: 'AESPA Image 2' },
+
+            ],
+            dough: [
+                { src: 'assets/dough/FINAL LOGO.png' },
+                { src: 'assets/dough/MOBILE WEBPAGE.png' },
+                { src: 'assets/dough/PACKAGING FINAL.png' },
+                { src: 'assets/dough/POSTER.png' },
+                { src: 'assets/dough/STAND.png' },
+                { src: 'assets/dough/WEBPAGE.png' }
+            ],
+            randomworks: [
+                { src: 'assets/3d/1.jpg' },
+                { src: 'assets/3d/2.jpg' },
+                { src: 'assets/3d/3.jpg' },
+                { src: 'assets/3d/4.jpg' },
+                { src: 'assets/3d/5.jpg' },
+                { src: 'assets/3d/6.jpg' },
+                { src: 'assets/3d/7.jpg' },
+                { src: 'assets/3d/8.jpg' },
+                { src: 'assets/3d/9.jpg' },
+                { src: 'assets/3d/10.jpg' },
+
+
+            ],
+            dorosense: [
+                { src: 'assets/doro/1.png' },
+                { src: 'assets/doro/2.png' },
+                { src: 'assets/doro/3.png' },
+                { src: 'assets/doro/4.png' },
+            ],
+            commissions: [
+                { src: 'assets/random/1.png' },
+                { src: 'assets/random/2.jpg' },
+                { src: 'assets/random/3.png' },
+                { src: 'assets/random/5.png' },
+
+            ],
+            lifestyle: [
+                { src: 'assets/lifestyle/1.png' },
+                { src: 'assets/lifestyle/2.png' },
+                { src: 'assets/lifestyle/3.png' },
+                { src: 'assets/lifestyle/4.png' },
+                { src: 'assets/lifestyle/5.png' },
+                { src: 'assets/lifestyle/6.png' },
+                { src: 'assets/lifestyle/7.png' },
+                { src: 'assets/lifestyle/8.png' },
+                { src: 'assets/lifestyle/9.png' },
+
+            ],
+            council: [
+                { src: 'assets/ceafa/1.png' },
+                { src: 'assets/ceafa/2.png' },
+                { src: 'assets/ceafa/3.png' },
+
+            ],
+            ags: [
+                { src: 'assets/ags/1.jpg' },
+                { src: 'assets/ags/2.jpg' },
+                { src: 'assets/ags/3.jpg' },
+                { src: 'assets/ags/4.jpg' },
+                { src: 'assets/ags/5.jpg' },
+                { src: 'assets/ags/6.jpg' },
+                { src: 'assets/ags/7.jpg' },
+                { src: 'assets/ags/8.jpg' },
+                { src: 'assets/ags/9.png' },
+
+                
+            ],
+            sena: [
+                { src: 'assets/sena/1.png' },
+                { src: 'assets/sena/2.png' },
+                { src: 'assets/sena/3.png' },
+                { src: 'assets/sena/4.png' },
+                { src: 'assets/sena/5.png' },
+                { src: 'assets/sena/6.png' },
+                { src: 'assets/sena/7.png' },
+                { src: 'assets/sena/8.png' }
+            ],
+            rcess: [
+                { src: 'assets/rcess/1.png' },
+                { src: 'assets/rcess/2.png' },
+            ],
+            css: [
+                { src: 'assets/css/1.jpg' },
+                { src: 'assets/css/2.jpg' },
+                { src: 'assets/css/3.png' },
+                { src: 'assets/css/4.png' },
+                { src: 'assets/css/5.png' },
+                { src: 'assets/css/6.png' },
+                { src: 'assets/css/7.png' },
+
+            ]
+        };
+
+        // Add related images to the new gallery
+        if (relatedImages[category]) {
+            let count = 0; // Counter for images
+            let currentGallery = document.createElement('div'); // Create a new gallery
+            currentGallery.className = 'image-gallery';
+
+            relatedImages[category].forEach(image => {
+                const item = document.createElement('div');
+                item.className = 'image-item';
+                item.innerHTML = `<img src="${image.src}" alt="${image.alt}" class="related-image">`;
+                currentGallery.appendChild(item);
+                count++;
+
+                // Add click event to enlarge image
+                item.querySelector('img').addEventListener('click', function() {
+                    showImageInModal(image.src); // Show image in modal
+                });
+
+                // If 4 images are added, append the current gallery to the body and reset
+                if (count === 4) {
+                    document.body.appendChild(currentGallery);
+                    currentGallery = document.createElement('div'); // Create a new gallery for the next set
+                    currentGallery.className = 'image-gallery';
+                    count = 0; // Reset counter
+                }
+            });
+
+            // Append any remaining images in the last gallery
+            if (count > 0) {
+                // Create empty boxes to fill the remaining spaces
+                for (let i = count; i < 4; i++) {
+                    const emptyBox = document.createElement('div');
+                    emptyBox.className = 'image-item empty'; // Add a class for styling if needed
+                    currentGallery.appendChild(emptyBox);
+                }
+                document.body.appendChild(currentGallery);
+            }
+
+            // Create a container for the back button
+            const buttonContainer = document.createElement('div');
+            buttonContainer.style.display = 'flex';
+            buttonContainer.style.justifyContent = 'center'; // Center horizontally
+            buttonContainer.style.alignItems = 'center'; // Center vertically
+            buttonContainer.style.marginTop = '20px'; // Add some margin
+
+            // Create and show the back button
+            const backButton = document.createElement('button');
+            backButton.innerText = 'Back';
+            backButton.className = 'back-button'; // Use the new class
+            backButton.onclick = function() {
+                window.location.href = 'works.html'; // Redirect to works.html
+            };
+
+            buttonContainer.appendChild(backButton); // Append the button to the container
+            document.body.appendChild(buttonContainer); // Append the container to the body
+        }
+    }
+
+    // Function to show image in modal
+    function showImageInModal(src) {
+        const modal = document.createElement('div');
+        modal.className = 'modal';
+        modal.innerHTML = `<span class="close" onclick="this.parentElement.style.display='none'">&times;</span>
+                          <img class="modal-content" id="img01" src="${src}">`;
+        document.body.appendChild(modal);
+        modal.style.display = "block"; // Show modal
+    }
+
+    // Add click event listeners to image titles
+    const imageTitles = document.querySelectorAll('.image-title');
+    imageTitles.forEach(title => {
+        title.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default anchor behavior
+            const category = this.getAttribute('data-category');
+            showRelatedImages(category); // Show related images
+        });
+    });
+</script>
+
+</body>
+
+</html>
