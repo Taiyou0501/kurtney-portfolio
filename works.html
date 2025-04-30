@@ -122,6 +122,16 @@
   </div>
 </div>
 
+<div class="image-gallery">
+    <div class="image-item">
+        <img src="assets/ss/pink.png"Work 5">
+        <a href="#" class="image-title" data-category="vids">Animations</a>
+    </div>
+    <div class="image-item empty" style="visibility: hidden;"></div>
+    <div class="image-item empty" style="visibility: hidden;"></div>
+    <div class="image-item empty" style="visibility: hidden;"></div>
+</div>
+
 <script>
     // Function to show related images
     function showRelatedImages(category) {
@@ -172,7 +182,15 @@
                 { src: 'assets/3d/8.jpg' },
                 { src: 'assets/3d/9.jpg' },
                 { src: 'assets/3d/10.jpg' },
-
+                { src: 'assets/3d/bmo front.png' },
+                { src: 'assets/3d/bmo side.png' },
+                { src: 'assets/3d/day.png' },
+                { src: 'assets/3d/dynamic.png' },
+                { src: 'assets/3d/front  angle.png' },
+                { src: 'assets/3d/front.png' },
+                { src: 'assets/3d/night.png' },
+                { src: 'assets/3d/side angle.png' },
+                { src: 'assets/3d/top.png' },
 
             ],
             dorosense: [
@@ -242,6 +260,11 @@
                 { src: 'assets/css/6.png' },
                 { src: 'assets/css/7.png' },
 
+            ],
+            vids: [
+                { src: 'assets/ss/cube.png', video: 'assets/Animations/loop final.mp4' },
+                { src: 'assets/ss/pink.png', video: 'assets/Animations/cube pink_1.mp4'  },
+                { src: 'assets/ss/kitchen.png', video: 'assets/Animations/0217-copy.mp4'  },
             ]
         };
 
@@ -258,9 +281,13 @@
                 currentGallery.appendChild(item);
                 count++;
 
-                // Add click event to enlarge image
+                // Add click event to enlarge image or play video
                 item.querySelector('img').addEventListener('click', function() {
-                    showImageInModal(image.src); // Show image in modal
+                    if (image.video) {
+                        window.open(image.video); // Open video if it exists
+                    } else {
+                        showImageInModal(image.src); // Show image in modal
+                    }
                 });
 
                 // If 4 images are added, append the current gallery to the body and reset
