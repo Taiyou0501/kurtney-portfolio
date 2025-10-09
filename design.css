@@ -241,10 +241,12 @@ nav a:hover {
 .slider {
     display: flex;
     transition: transform 0.5s ease; /* Smooth transition */
+    height: 100%;
 }
 
 .slide {
     min-width: 100%; /* Each slide takes full width */
+    width: 100%;
     height: 100%; /* Ensure each slide takes the full height of the container */
     object-fit: cover; /* Maintain aspect ratio and cover the container */
     display: none; /* Hide all slides initially */
@@ -432,4 +434,402 @@ nav a:hover {
 .back-button:hover {
     background-color: #d68a9e; /* Darker shade on hover */
     transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Default (desktop) sizing for Contacts header */
+.contact-header {
+    font-size: 5rem;
+}
+
+/* ============================ */
+/* Responsive Styles            */
+/* ============================ */
+
+/* Large tablets / small laptops */
+@media (max-width: 1024px) {
+    header {
+        padding: 1.2rem 6%;
+    }
+
+    .logo {
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .logo img {
+        height: 70px;
+    }
+
+    nav ul {
+        gap: 1rem;
+        margin-right: 0;
+        margin-top: 0;
+    }
+
+    nav a {
+        font-size: 1.6rem;
+        padding: 6px 18px;
+    }
+
+    .slider-container {
+        max-width: 100%;
+        height: 280px;
+        margin: 16px auto;
+    }
+
+    .prev {
+        left: 40px;
+    }
+
+    .next {
+        right: 40px;
+    }
+
+    .container {
+        width: 90%;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .works-container, .about-container {
+        width: 100%;
+    }
+
+    .works, .about {
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+
+    .work-item, .about-item {
+        width: 220px;
+    }
+
+    .works-container h2, .about-container h2 {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    /* About page (large tablets) */
+    .profile-container {
+        gap: 2rem;
+        padding: 0 6%;
+    }
+    .profile-container .profile-image {
+        width: 260px;
+        align-self: center;
+    }
+    .profile-content h1 {
+        font-size: 2.4rem;
+    }
+    .profile-content p {
+        font-size: 18px;
+        max-width: 600px;
+    }
+    .personal-info {
+        width: 90%;
+    }
+
+    /* Contacts page (large tablets) */
+    .contact-header {
+        font-size: 3.6rem;
+        margin: 16px 0;
+    }
+    .sparkle-container {
+        margin: 16px 0;
+    }
+    .sparkle-icons {
+        width: 56px;
+        height: 56px;
+    }
+    .contact-info {
+        gap: 16px;
+    }
+    .profile-image {
+        width: 320px;
+    }
+}
+
+/* Tablets and medium phones */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.6rem;
+    }
+
+    nav a {
+        font-size: 1.3rem;
+        padding: 6px 14px;
+    }
+
+    .slider-container {
+        height: 220px;
+        border-radius: 12px;
+    }
+
+    .slide {
+        border-radius: 12px;
+    }
+
+    .prev, .next {
+        display: none;
+    }
+
+    .works, .about {
+        gap: 16px;
+    }
+
+    .work-item, .about-item {
+        width: 45%;
+        max-width: 280px;
+    }
+
+    .button-link {
+        font-size: 1.6rem;
+        padding: 8px 16px;
+    }
+
+    /* Works page gallery responsive (tablet/medium phones) */
+    .image-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+        margin: 24px auto;
+    }
+
+    .image-item {
+        flex: 0 0 45%;
+        margin: 0; /* override desktop spacing */
+    }
+
+    .image-item img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .works-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .image-title {
+        font-size: 1rem;
+        margin-top: 6px;
+    }
+
+    /* About page (tablets/medium phones) */
+    .profile-container {
+        flex-direction: column;
+        padding: 0 5%;
+        gap: 1.2rem;
+    }
+    .profile-container .profile-image {
+        width: 220px;
+        align-self: center;
+    }
+    .profile-content {
+        padding-top: 10px;
+        max-width: 100%;
+        text-align: center;
+    }
+    .profile-content h1 {
+        font-size: 2rem;
+    }
+    .profile-content p {
+        font-size: 16px;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .personal-info {
+        flex-direction: column;
+        gap: 12px;
+        width: 94%;
+    }
+    .info-item {
+        justify-content: center;
+    }
+
+    /* Contacts page (tablets/medium phones) */
+    .contact-header {
+        font-size: 3rem;
+        text-align: center;
+    }
+    .sparkle-icons {
+        width: 50px;
+        height: 50px;
+    }
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+    .contact-details {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    .contact-details h3 {
+        font-size: 32px;
+        margin: 12px 0;
+    }
+    .profile-image {
+        width: 280px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    body {
+        background-attachment: scroll; /* Improve mobile performance */
+    }
+
+    .logo img {
+        height: 52px;
+    }
+
+    /* Keep all nav links on one line */
+    nav ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 0.3rem;
+    }
+    nav a {
+        font-size: 0.95rem;
+        padding: 4px 10px;
+    }
+
+    .slider-container {
+        height: 250px;
+        margin-top: 10px;
+    }
+
+    /* Hide arrow buttons on small phones */
+    .prev, .next {
+        display: none;
+    }
+
+    .container {
+        width: 92%;
+        gap: 12px;
+        flex-direction: row; /* Keep sections side by side */
+    }
+
+    .works-container, .about-container {
+        width: 50%; /* Make each section smaller to fit side by side */
+    }
+
+    .works, .about {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 16px 0;
+    }
+
+    .work-item, .about-item {
+        width: 48%;
+        max-width: 200px;
+    }
+
+    .works-container h2, .about-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .button-link {
+        font-size: 1.4rem;
+        padding: 8px 14px;
+    }
+
+    /* Works page gallery responsive (small phones) */
+    .works-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .image-gallery {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin: 16px auto;
+        max-width: 100%;
+        padding: 0 8px;
+    }
+
+    .image-item {
+        flex: 0 0 48%; /* two columns */
+        margin: 0;
+    }
+
+    .image-item img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .image-title {
+        font-size: 0.9rem;
+        line-height: 1.2;
+        padding: 0 2px;
+        word-break: break-word;
+    }
+
+    /* About page (small phones) */
+    .profile-container .profile-image {
+        width: 180px;
+    }
+    .profile-content h1 {
+        font-size: 1.6rem;
+    }
+    .profile-content p {
+        font-size: 14px;
+    }
+    .download-btn {
+        font-size: 15px;
+        padding: 12px 28px;
+    }
+    .personal-info {
+        width: 95%;
+        padding: 1rem;
+    }
+    .info-text span,
+    .info-text p {
+        font-size: 18px;
+    }
+
+    /* Contacts page (small phones) */
+    .contact-header {
+        font-size: 3rem;
+        margin: 12px 0;
+    }
+    .sparkle-container {
+        margin: 10px 0;
+    }
+    .sparkle-icons {
+        width: 40px;
+        height: 40px;
+    }
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+    }
+    .contact-details {
+        font-size: 1.1rem;
+    }
+    .contact-details h3 {
+        font-size: 26px;
+        margin: 8px auto;
+    }
+    .profile-image {
+        width: 220px;
+        display: block;
+        margin: 8px auto; /* center image on phone */
+    }
 }

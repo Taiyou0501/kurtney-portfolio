@@ -40,6 +40,7 @@
         <img src="assets/pic4.png" alt="Image 3" class="slide">
 
       </div>
+      
   </div>
 
   <button class="prev" onclick="prevSlide()">
@@ -72,6 +73,38 @@
 
       showSlide(currentIndex);
       setInterval(nextSlide, 5000); // Change slide every 5 seconds
+
+      // Touch swipe support for mobile
+      (function addSwipeSupport() {
+          const sliderContainer = document.querySelector('.slider-container');
+          if (!sliderContainer) return;
+
+          let touchStartX = 0;
+          let touchEndX = 0;
+          const SWIPE_THRESHOLD = 50; // pixels
+
+          function handleTouchStart(e) {
+              touchStartX = e.changedTouches[0].clientX;
+          }
+
+          function handleTouchMove(e) {
+              touchEndX = e.changedTouches[0].clientX;
+          }
+
+          function handleTouchEnd() {
+              const deltaX = touchEndX - touchStartX;
+              if (Math.abs(deltaX) < SWIPE_THRESHOLD) return;
+              if (deltaX < 0) {
+                  nextSlide(); // swipe left
+              } else {
+                  prevSlide(); // swipe right
+              }
+          }
+
+          sliderContainer.addEventListener('touchstart', handleTouchStart, { passive: true });
+          sliderContainer.addEventListener('touchmove', handleTouchMove, { passive: true });
+          sliderContainer.addEventListener('touchend', handleTouchEnd, { passive: true });
+      })();
   </script>
 
   <div class="container">

@@ -29,9 +29,9 @@
             background-color: rgba(0,0,0,0.9); 
         }
         .modal-content {
-            margin: auto;
+            margin: 40px auto;
             display: block;
-            width: 80%; 
+            width: 90%; 
             max-width: 700px; 
         }
         .close {
@@ -42,6 +42,20 @@
             font-size: 40px;
             font-weight: bold;
             cursor: pointer;
+        }
+
+        /* Responsive modal for small screens */
+        @media (max-width: 480px) {
+            .modal-content {
+                width: 95%;
+                margin: 24px auto;
+                max-height: 80vh;
+                object-fit: contain;
+            }
+            .close {
+                right: 16px;
+                font-size: 32px;
+            }
         }
     </style>
 </head>
